@@ -1,0 +1,10 @@
+<!-- book-details.component.html -->
+<div *ngIf="loading">Loading book details...</div> <!-- Loading indicator -->
+<div *ngIf="!loading">
+  <h2>{{ book.title }}</h2> <!-- Book title -->
+  <p>Author: {{ book.author }}</p> <!-- Book author -->
+  <p>Genre: {{ book.genre }}</p> <!-- Book genre -->
+  <p>Rating: {{ book.rating }}</p> <!-- Book rating -->
+  <p>Description: {{ book.description }}</p> <!-- Book description -->
+  <img [src]="book.coverImage" alt="{{ book.title }}" /> <!-- Book cover image -->
+</div>

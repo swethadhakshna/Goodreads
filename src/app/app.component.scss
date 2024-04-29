@@ -1,0 +1,25 @@
+/* app.component.css */
+nav {
+  background-color: #333; // Dark background color for the navigation bar
+  padding: 30px; // Padding for the navigation bar
+  // display: flex; // Flexbox layout
+  justify-content: space-between; // Space elements between
+}
+
+nav a {
+  color: white; // White text color for navigation links
+  text-decoration: none; // No text decoration
+  margin-right: 38px; // Spacing between links
+}
+
+nav a:hover {
+  text-decoration: underline; // Underline on hover
+}
+
+nav a:last-child {
+  margin-right: 0; // Remove margin on the last link
+}
+
+.content {
+  padding: 20px; // Padding for the main content area
+}

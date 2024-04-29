@@ -1,0 +1,19 @@
+<!-- book-list.component.html -->
+<div *ngIf="loading">Loading books...</div> <!-- Loading indicator -->
+<div *ngIf="!loading">
+  <h2>Books</h2> <!-- Books header -->
+  <input type="text" [(ngModel)]="searchQuery" (input)="onSearch()" placeholder="Search by title or author" /> <!-- Search functionality -->
+
+  <ul>
+    <li *ngFor="let book of filteredBooks"> <!-- Display books -->
+      <img [src]="book.coverImage" alt="{{ book.title }}" style="aspect-ratio: 1;"/> 
+      <h3>{{ book.title }}</h3> <!-- Book title -->
+      <p>{{ book.author }}</p> <!-- Book author -->
+      <a routerLink="/books/{{ book.id }}">View Details</a><br> <!-- Link to book details -->
+      <!-- Buttons to add to specific shelves -->
+      <button class="btn" (click)="addToShelf('currentlyReading', book)">Continue Reading</button> 
+      <button class="btn" (click)="addToShelf('read', book)">Mark as Read</button>
+      <button class="btn" (click)="addToShelf('toRead', book)">Want to Read</button>
+    </li>
+  </ul>
+</div>

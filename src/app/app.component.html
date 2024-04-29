@@ -1,0 +1,16 @@
+<!-- app.component.html -->
+<div>
+  <nav>
+    <a routerLink="/">Home</a> <!-- Link to the Home page -->
+    <a routerLink="/books">Books</a> <!-- Link to the Books page -->
+    <a routerLink="/shelves">Book Shelves</a> <!-- Link to the Book Shelves page -->
+    <a *ngIf="!currentUser" routerLink="/register">Register</a> <!-- Link to Register page -->
+    <a *ngIf="!currentUser" routerLink="/login">Login</a> <!-- Link to Login page -->
+    <a *ngIf="currentUser" (click)="logout()">Logout</a> <!-- Button to log out -->
+  </nav>
+
+  <div class="content"> <!-- Main content area -->
+    <router-outlet></router-outlet> <!-- Angular router outlet for routing -->
+  </div>
+</div>
+<!-- <ng-toast></ng-toast> -->

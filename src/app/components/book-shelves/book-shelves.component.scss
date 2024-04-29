@@ -1,0 +1,29 @@
+/* book-shelves.component.css */
+ul {
+  list-style-type: none; // No list style
+  padding: 0; // No padding for the list
+}
+
+li {
+  padding: 10px; // Padding for list items
+  border: 1px solid #ddd; // Light border
+  background-color: white; // White background
+  margin-bottom: 10px; // Spacing between list items
+  transition: background-color 0.3s; // Smooth background transition
+}
+
+li:hover {
+  background-color: #f1f1f1; // Background change on hover
+}
+
+button {
+  padding: 5px 10px; // Padding for buttons
+  background-color: #333; // Dark background color
+  color: white; // White text color
+  border: none; // No border
+  cursor: pointer; // Pointer cursor
+}
+
+button:hover {
+  background-color: #555; // Darker background on hover
+}

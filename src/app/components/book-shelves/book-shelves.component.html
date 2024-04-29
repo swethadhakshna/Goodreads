@@ -1,0 +1,32 @@
+<!-- book-shelves.component.html -->
+<div *ngIf="loading">Loading book shelves...</div> <!-- Loading indicator -->
+<div *ngIf="!loading">
+  <h2>Book Shelves</h2> <!-- Shelves header -->
+  
+  <!-- Continue Reading shelf -->
+  <h3>Continue Reading ({{ bookLists.currentlyReading.length }})</h3> <!-- Show count of books -->
+  <ul>
+    <li *ngFor="let book of bookLists.currentlyReading"> <!-- List books -->
+      {{ book.title }} <!-- Book title -->
+      <button (click)="removeBookFromList('currentlyReading', book.id)">Remove</button> <!-- Remove book -->
+    </li>
+  </ul>
+
+  <!-- Read shelf -->
+  <h3>Read ({{ bookLists.read.length }})</h3> <!-- Show count of books -->
+  <ul>
+    <li *ngFor="let book of bookLists.read"> <!-- List books -->
+      {{ book.title }} <!-- Book title -->
+      <button (click)="removeBookFromList('read', book.id)">Remove</button> <!-- Remove book -->
+    </li>
+  </ul>
+
+  <!-- Want to Read shelf -->
+  <h3>Want to Read ({{ bookLists.toRead.length }})</h3> <!-- Show count of books -->
+  <ul>
+    <li *ngFor="let book of bookLists.toRead"> <!-- List books -->
+      {{ book.title }} <!-- Book title -->
+      <button (click)="removeBookFromList('toRead', book.id)">Remove</button> <!-- Remove book -->
+    </li>
+  </ul>
+</div>
